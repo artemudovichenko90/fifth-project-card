@@ -77,7 +77,7 @@
 .card h1 {
     font-size: 1em;
     text-transform: capitalize;
-    position: relative;
+    padding-right: 1em;
 }
 
 .logo {
