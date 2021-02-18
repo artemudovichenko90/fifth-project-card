@@ -1,0 +1,113 @@
+:root {
+    font-size: medium;
+    font-weight: bold;
+    --top-padding-card: 2rem;
+    --right-padding-card: 2rem;
+}
+
+.container-cards {
+    background-color: yellow;
+    font-family: sans-serif;
+    color: #f2eaf2;
+}
+
+.list-cards {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.item-card {
+    text-align: initial;
+    display: inline-block;
+    width: 30%;
+    border-radius: 5px;
+}
+
+.card {
+    padding: var(--top-padding-card) var(--right-padding-card);
+    position: relative;
+    overflow: hidden;
+}
+
+.card h1, p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*.usd::before {*/
+/*    content: url("../img/currency-usd.png");*/
+/*}*/
+.card::after {
+    content: "";
+    --radius-circle: 150px;
+    width: var(--radius-circle);
+    height: var(--radius-circle);
+    border-radius: calc(var(--radius-circle) / 2);
+    position: absolute;
+    opacity: 0.2;
+    background: linear-gradient(.25turn, white, #e5d7d7);
+    right: -4em;
+    top: -1em;
+}
+
+.card::before {
+    content: "";
+    --radius-circle: 150px;
+    width: var(--radius-circle);
+    height: var(--radius-circle);
+    border-radius: calc(var(--radius-circle) / 2);
+    position: absolute;
+    opacity: 0.2;
+    background: linear-gradient(.25turn, white, #e5d7d7);
+    right: -1em;
+    bottom: -4em;
+}
+
+.item-card ~ .item-card {
+    margin-left: 3%;
+}
+
+.card header {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.card h1 {
+    font-size: 1em;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    width: 1em;
+    top: 0;
+    right: 0;
+}
+
+.result:first-letter {
+    text-transform: uppercase;
+}
+
+.price {
+    font-size: 1.5rem;
+    margin: 1em 0 2em;
+}
+
+.result {
+    font-size: 1rem;
+}
+
+.item-card:nth-child(3n+1) {
+    background: linear-gradient(.25turn, #fdbb92, #fd6c8f);
+}
+
+.item-card:nth-child(3n+2) {
+    background: linear-gradient(.25turn, #80bff7, #007de3);
+}
+
+.item-card:nth-child(3n+3) {
+    background: linear-gradient(.25turn, #5cded1, #00d9b8);
+}
